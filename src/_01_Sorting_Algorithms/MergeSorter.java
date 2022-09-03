@@ -18,8 +18,8 @@ public class MergeSorter extends Sorter {
     
     private void mergeSort(int[] array, int low, int high, SortingVisualizer display) {
         // 1. Create a temporary integer array that is the same length as the passed in array.
-        int[] temp = 
-        temp.length = array.length;
+        int[] temp = new int[array.length]; 
+        
         
         // 2. make an if statement that checks if low is less than high
         //    and put the rest of the method inside of it
@@ -35,43 +35,59 @@ public class MergeSorter extends Sorter {
             
             // 6. copy the elements from the array into the temporary array,
             //    but only the elements from low to high inclusive
-          
+            for(int i = low; i<= high; i++) {
+            	temp[i] = array[i];
+            	display.updateDisplay();
+            }
             
             // 7. create three integers called i, j, and k and
             //    set them equal to low, middle + 1, and low respectively
-            
+            int i = low;
+            int j = middle + 1;
+            int k = low;
             
             // 8. while i is less than or equal to middle
             //    and j is less than or equal to high
         // (ends after step 16)
+            while(i<=middle && j<= high) {
+            	
+            
             
                 // 9. if temp array at i is less than or equal 
                 //    to temp array at j 
-                
+                if(temp[i] <= temp[j]) {
                     // 10. set array at k equal to temp array at i
-                    
+                    array[k] = temp[i];
                     // 11. increase i by 1
-                    
+                    i+=1;
+                    display.updateDisplay();
+                }
                 // 13. else (ends after step 15)
-               
+                else {
                     // 14. set array at k equal to temop array at j
-                   
+                	array[k] = temp[j];
                     // 15. increase j by 1
-                    
+                    j+=1;
+                    display.updateDisplay();
                
+                }
                 // 16. increase k by 1
-               
+               k+=1;
+               display.updateDisplay();
               
-            
+            }
             // 17. make a while loop that runs while i is less than or equal to middle
-           
+           while(i<= middle) {
                 // 18. set array at k equal to temo array at i
-                
+                array[k] = temp[i];
                 // 19. increase k and i by 1
-                
-                
+        	   k+=1;
+        	   i+=1;
+        	   display.updateDisplay();
+           } 
                
             
         
     }
+}
 }
