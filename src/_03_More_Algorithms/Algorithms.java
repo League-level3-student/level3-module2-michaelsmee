@@ -8,10 +8,85 @@ import java.util.List;
 public class Algorithms {
     
     public static String multiply(int num1, int num2) {
-        return null;
+        return (num1 + " x " + num2 + " = " + (num1*num2));
+        
+    }
+    
+    public static boolean isPrime(int num1) {
+    	boolean isFalse = true;
+    	for(int i=2; i<=num1/2; i++) {
+    		if(num1%i == 0) {
+    			isFalse = false;
+    			break;
+    		}
+    	}
+    	return isFalse;
+    	
+    }
+    
+    public static boolean isSquare(int num1) {
+    	boolean isTrue = false;
+    	for(int i=0; i<=num1; i++) {
+    		if(i*i == num1) {
+    			isTrue = true;
+    			break;
+    		}
+    	}
+    	return isTrue;
+    }
+    
+    public static boolean isCube(int num1) {
+    	boolean trueOrFalse = false;
+    	for(int i=0; i<=num1; i++) {
+    		if(i*i*i == num1) {
+    			trueOrFalse = true;
+    			break;	
+    		}
+    	}
+    	return trueOrFalse;
     }
     
     public static int findBrokenEgg(List<String> eggs) {
-        return 0;
+        int numBrokenEggs = 0;
+        for(int i=0; i<eggs.size(); i++) {
+        	if(eggs.get(i).equals("cracked")) {
+        		numBrokenEggs+=1;
+        	}
+        }
+    	return numBrokenEggs;
     }
+    
+    public static int countPearls(List<Boolean> oysters) {
+    	int pearls = 0;
+    	for(int i=0; i<oysters.size(); i++) {
+    		if(oysters.get(i) == true) {
+    			pearls += 1;
+    		}
+    	}
+    	return pearls;
+    }
+    
+    public static double findTallest(List<Double>peeps) {
+    	double tallest = 0.0;
+    	for(int i=0; i<peeps.size()-1; i++) {
+    		if(peeps.get(i)>peeps.get(i+1)){
+    			tallest = i;
+    		}
+    	}
+    	return tallest;
+    }
+    
+    public static String findLongestWord(List<String> words) {
+    	String longest = words.get(0);
+    	for(int i=0; i<words.size(); i++) {
+    		if(words.get(i).length()>longest.length()) {
+    			longest = words.get(i);
+    			
+    		}
+    	}
+    	return longest;
+    }
+    
+    public static 
+    
 }
