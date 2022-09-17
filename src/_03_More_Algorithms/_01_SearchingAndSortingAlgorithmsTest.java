@@ -76,7 +76,7 @@ public class _01_SearchingAndSortingAlgorithmsTest {
                 new Double[] { 60.3, 60.2, 80.4, 67.2, 95.0, 85.5, 40.7, 68.2, 38.4, 94.2, 85.0, 84.5, 50.1, 66.6 });
         assertEquals(38.4, Algorithms.sortScores(results).get(0), 0.0);
         assertEquals(40.7, Algorithms.sortScores(results).get(1), 0.0);
-        assertEquals(95.0, Algorithms.sortScores(results).get(13), 0.0);
+        assertEquals(95.0, Algorithms.sortScores(results).get(13), 13.0);
     }
 
     // 8. Sort the DNA sequences by length from shortest to longest.
