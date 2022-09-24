@@ -16,7 +16,7 @@ class _02_JavaClassSearchSortTest {
         int[] unsorted = { 4, 3, 5, 0, 1, 2 };
         int[] sorted = { 0, 1, 2, 3, 4, 5 };
         
-        assertTrue(Arrays.equals(sorted, _02_JavaClassSearchSort.arraySort(unsorted)));
+        assertTrue(Arrays.equals(sorted, _02_JavaClassSearchSort.arraySort(sorted)));
     }
 
     @Test
